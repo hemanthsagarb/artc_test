@@ -77,7 +77,7 @@ variables:
 jobs:
   - job: Deploy
     displayName: Deploy all microservices
-    pool: Env_$(EnvironmentName)
+    pool: ARTC_DEV
     steps:
       - task: Bash@3
         displayName: Configure Kubeconfig
