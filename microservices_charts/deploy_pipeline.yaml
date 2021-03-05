@@ -92,14 +92,7 @@ jobs:
           script: |
             make deploy TF_BUILD=true NAMESPACE=$(Namespace) ENVIRONMENT=$(EnvironmentName) STANDALONE=true CLIENT=$(clientName)
           targetType: inline
-          workingDirectory: $(workingDirectory)/client_configs/artc/microservices_charts/redis
-      - task: Bash@3
-        displayName: Deploy tile38
-        inputs:
-          script: |
-            make deploy TF_BUILD=true NAMESPACE=$(Namespace) ENVIRONMENT=$(EnvironmentName) STANDALONE=true CLIENT=$(clientName)
-          targetType: inline
-          workingDirectory: $(workingDirectory)/client_configs/artc/microservices_charts/tile38
+          workingDirectory: $(workingDirectory)/artc/microservices_charts/redis
       # - task: Bash@3
       #   displayName: Deploy nginx
       #   inputs:
