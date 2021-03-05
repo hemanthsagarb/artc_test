@@ -92,7 +92,7 @@ jobs:
           script: |
             make deploy TF_BUILD=true NAMESPACE=$(Namespace) ENVIRONMENT=$(EnvironmentName) STANDALONE=true CLIENT=$(clientName)
           targetType: inline
-          workingDirectory: $(workingDirectory)/artc/microservices_charts/redis
+          workingDirectory: $(workingDirectory)/microservices_charts/redis
       # - task: Bash@3
       #   displayName: Deploy nginx
       #   inputs:
@@ -116,4 +116,4 @@ jobs:
           script: |
             make deploy TF_BUILD=true NAMESPACE=$(Namespace) ENVIRONMENT=$(EnvironmentName) STANDALONE=false CLIENT=$(clientName) GRAPHQL_SERVICE_IMAGE_TAG=0.21.113
           targetType: inline
-          workingDirectory: $(workingDirectory)/client_configs/artc/microservices_charts/graphql_service
+          workingDirectory: $(workingDirectory)/microservices_charts/graphql_service
